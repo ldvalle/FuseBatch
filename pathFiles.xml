@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<properties>
+  <PathFiles>
+      <origen_files>/home/lucas/data_in/</origen_files>
+      <destino_files>/home/lucas/data_out/</destino_files>
+      <log_files>/home/lucas/data_log/</log_files>
+      <malos_files>/home/lucas/data_malos/</malos_files>
+  </PathFiles>
+</properties>
