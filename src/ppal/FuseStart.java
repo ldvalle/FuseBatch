@@ -49,9 +49,9 @@ public class FuseStart {
                 File fRepoMal =new File(eGlobal.pathMALOS + lstArchivos[i].getName());
 
                 if(srvEF.ProcesaEfactura(fWork, eGlobal)){
-                    //fWork.renameTo(fRepoOk);
+                    fWork.renameTo(fRepoOk);
                 }else{
-                    //fWork.renameTo(fRepoMal);
+                    fWork.renameTo(fRepoMal);
                 }
             }
 

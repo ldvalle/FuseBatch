@@ -94,6 +94,8 @@ public class daoEFactura {
             st.setString(2, sDatoViejo);
             st.setString(3, sDatoNuevo);
 
+            st.executeUpdate();
+
             con.commit();
 
         }catch(SQLException sqle){
@@ -145,6 +147,8 @@ public class daoEFactura {
             st.setString(2, sDatoViejo);
             st.setString(3, sDatoNuevo);
 
+            st.executeUpdate();
+
             con.commit();
 
         }catch(SQLException sqle){
@@ -192,6 +196,8 @@ public class daoEFactura {
             st.setString(2, sDatoViejo);
             st.setString(3, sDatoNuevo);
 
+            st.executeUpdate();
+
             con.commit();
 
         }catch(SQLException sqle){
@@ -219,8 +225,8 @@ public class daoEFactura {
 
     private static final String SEL_CLIENTE_ADHERIDO = "SELECT COUNT(*) FROM clientes_digital " +
             "WHERE numero_cliente = ? " +
-            "AND fecha_alta <= TODAY " +
-            "AND (fecha_baja IS NULL OR fecha_baja > TODAY) ";
+            "AND fecha_alta <= CURRENT " +
+            "AND (fecha_baja IS NULL OR fecha_baja > CURRENT) ";
 
     private static final String INS_ADHESION = "INSERT INTO clientes_digital( " +
             "numero_cliente, " +
@@ -240,8 +246,8 @@ public class daoEFactura {
             "rol_modif = 'SALESFORCE', " +
             "fecha_modif = CURRENT " +
             "WHERE numero_cliente = ? " +
-            "AND fecha_alta <= TODAY " +
-            "AND (fecha_baja IS NULL OR fecha_baja > TODAY) ";
+            "AND fecha_alta <= CURRENT " +
+            "AND (fecha_baja IS NULL OR fecha_baja > CURRENT) ";
 
     private static final String INS_MODIF = "INSERT INTO modif (" +
             "numero_cliente," +
@@ -255,7 +261,7 @@ public class daoEFactura {
             "proced," +
             "dir_ip" +
             ")VALUES(" +
-            "?, 'MOD', 'SALESFORCE', CURRENT, 'A', 269, ?, ?, 'BATCH') ";
+            "?, 'MOD', 'SALESFORCE', CURRENT, 'A', 269, ?, ?, 'FUSE_BATCH', 'BATCH') ";
 
     private static final String BAJA_ADHESION = "UPDATE clientes_digital SET " +
             "rol_baja = 'SALESFORCE', " +

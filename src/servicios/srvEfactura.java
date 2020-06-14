@@ -44,7 +44,7 @@ public class srvEfactura {
                         reg.setExternalID(vLinea[4].trim());
                         reg.setRolModif(vLinea[5].trim());
                         reg.setFechaModif(fechaF.parse(vLinea[6].trim()));
-                        reg.setTipoReparto(vLinea[6].trim());
+                        reg.setTipoReparto(vLinea[7].trim());
 
                         reg.setEmail_1();
                         reg.setEmail_2();
