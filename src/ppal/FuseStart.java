@@ -11,7 +11,7 @@ import servicios.srvEfactura;
 public class FuseStart {
     static private String sOS;
     static VarGlobales eGlobal;
-    static final String sMaskEFactura="EFactura_";
+    static final String sMaskEFactura="enel_care_case_efactura_t1";
 
     public static void main(String[] args) {
 

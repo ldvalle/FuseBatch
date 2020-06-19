@@ -15,7 +15,7 @@ public class srvEfactura {
 
     public boolean ProcesaEfactura(File fArchivo, VarGlobales vg){
         String sMsg="";
-        SimpleDateFormat fechaF = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat fechaF = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         boolean iRcv=false;
         daoEFactura miDao = new daoEFactura();
         int iCant=0;
