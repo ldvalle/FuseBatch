@@ -9,6 +9,7 @@ public class UConnection {
     private static Connection con = null;
 
     public static Connection getConnection(){
+        String miKey="q1w2e3r4t5y6";
         ResourceBundle rb =null;
         String driver="";
         String url= "";
@@ -21,9 +22,14 @@ public class UConnection {
 
                 rb = ResourceBundle.getBundle("jdbc");
                 driver = rb.getString("driver");
+
+                usr = Kripton.Desencriptar2(rb.getString("usr"), miKey);
+                pwd = Kripton.Desencriptar2(rb.getString("pwd"), miKey);
                 url = rb.getString("url");
-                usr = rb.getString("usr");
-                pwd = rb.getString("pwd");
+
+                //usr = rb.getString("usr");
+                //pwd = rb.getString("pwd");
+
 
                 Class.forName(driver);
                 //con = DriverManager.getConnection(url, usr, pwd);
