@@ -26,7 +26,6 @@ public class UConnection {
                 usr = Kripton.Desencriptar2(rb.getString("usr"), miKey);
                 pwd = Kripton.Desencriptar2(rb.getString("pwd"), miKey);
                 url = rb.getString("url");
-
                 //usr = rb.getString("usr");
                 //pwd = rb.getString("pwd");
 
